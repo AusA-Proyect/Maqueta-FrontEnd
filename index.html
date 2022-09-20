@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=devide-width, user-scalable=no, initial-scale=1, maximun-scale=1, minimun-scale=1">
+
+    <!--Fonts de Googlee-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i">
+
+    <!--Archivos CSS-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css"> <!--Iconos Boxicons-->
+    <link rel="stylesheet" href="aos/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="icon" href="img/argprog.png"> <!--icono de pestaña-->
+    <title>Mi primer HTML</title>
+    
+</head>
+
+<body data-spy="scroll">
+
+<!--Pantalla Intro-->
+
+  <section id="intro" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="arg-prog">
+      <a href="https://argentinaprograma.inti.gob.ar/" target="_blank">
+        <img src="img/argprog.png" width="30" height="24" class="border rounded"> Argentina Programa
+      </a>
+    </div>
+    <div class="intro__container1" data-aos="fade-down">
+      <h1>Cesar Ausa</h1>
+    </div>
+    <div class="intro__container2" data-aos="fade-up">
+      <p><i>Soy </i><span class="typed" data-typed-items="Desarrollador, Diseñador, Programador, Tecnico, mucho mas..."></span></p>
+    </div>
+  </section>
+  <!-- FIN Pantalla Intro-->
+
+<!--Barra principal de navegacion-->
+
+  <div class="container-fluid" id="navbar">
+    <nav class="navbar navbar-expand-md navbar-dark justify-content-center">
+
+      <div class="navbar__foto">
+        <a class="navbar-brand" href="#sobremi">
+          <img src="img/perfil.jpg" class="rounded-circle">
+        </a>
+      </div>
+      
+      <div class="redes-sociales">
+        <a href="#whatsapp" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="#facebook" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#instagram" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#twitter" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+
+      <ul class="navbar-nav" id="navbar__botones">
+        <li><a href="#" class="nav-link scrollto"><i class="bx bx-home align-text-top"></i> <span>Inicio</span></a></li>
+        <li><a href="#sobremi" class="nav-link scrollto"><i class="bx bx-user align-text-top"></i> <span>Mi perfil</span></a></li>
+        <li><a href="#exp-laboral" class="nav-link scrollto"><i class="bx bx-book-content align-text-top"></i> <span>Exp. Profesional</span></a></li>
+        <li><a href="#estudios" class="nav-link scrollto"><i class="bx bx-file-blank align-text-top"></i> <span>Estudios</span></a></li>
+        <li><a href="#servicios" class="nav-link scrollto"><i class="bx bx-server align-text-top"></i> <span>Servicios</span></a></li>
+        <li><a href="#contacto" class="nav-link scrollto"><i class="bx bx-envelope align-text-top"></i> <span>Contacto</span></a></li>
+      </ul>
+      <div class="button" id="navbar__botones-login"> 
+        <button class="btn btn-primary" href="#container__offcanvas" type="submit" id="navbar__boton1" data-bs-toggle="offcanvas">Iniciar sesion</button>
+        <button class="btn btn-primary" type="submit" id="navbar__boton2">Registrate</button>
+      </div>
+    </nav>
+  </div> 
+  <!--FIN Barra principal de navegacion-->
+
+  <header id="header">
+
+    <!-- Offcanvas de Login-->
+
+    <div class="container">
+      <div class="offcanvas offcanvas-start" tabindex="1" id="container__offcanvas">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Iniciar Sesion</h5>
+          <button class="btn-close text-reset" type="button" name="button" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form>
+            <div class="mb-3">
+              <label for="mail" class="form-label">Usuario</label>
+              <input type="text" id="mail" class="form-control">
+            </div>
+  
+            <div class="mb-3">
+              <label for="Clave" class="form-label">Contraseña</label>
+              <input type="password" id="clave" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Iniciar sesion</button>
+            <a href="#" class="forget-password">Olvidaste tu contraseña?</a>
+          </form>
+        </div>
+      </div>
+    </div> <!--Fin Offcanvas de Login-->
+
+  </header>
+
+<!-- Cuerpo Main -->
+
+  <main>
+
+    <section id="sobremi">
+      <div class="container">
+
+        <div class="seccion-titulo">
+          <h2>Acerca de mi</h2>
+          <p>Soy Informatico, Tecnico en Telecomunicaciones, Tecnico Electronico, pero principalmente Full Stack Developer Jr, tengo gusto a los videojuegos y ademas soy amante de todo lo relacionado que tenga que ver con la tecnologia.</p>
+        </div>
+
+        <div class="col" id="datos-personales">
+          <h3> <strong>Full Stack Developer Jr</strong> - Informatico - Tecnico Electronico - Tecnico en Telecomunicaciones</h3>
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+              <ul>
+                <li><strong>Cumpleaños:</strong>4 Enero 1989</li>
+                <li><strong>DNI:</strong>94401459</li>
+                <LI><strong>Nacionalidad:</strong>Peru</LI>
+                <li><strong>Telefono:</strong>1138065126</li>
+              </ul>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+              <ul>
+                <li><strong>Edad:</strong>33</li>
+                <li><strong>Direccion:</strong>Rio Eufrates 828 - Pilar - Buenos Aires</li>
+                <li><strong>Mail:</strong>bitcoinausa@gmail.com</li>
+                <li><strong>Licencia:</strong>B1 - D1 Vigente</li>
+              </ul>
+            </div>            
+          </div>
+        </div>
+                
+      </div>
+    </section>
+
+    <section id="exp-laboral">
+      <div class="container">
+
+        <div class="seccion-titulo">
+          <h2>Experiencia Profesional</h2>
+          <p>En este apartado encontraras las empresas donde brindé mis conocimentos, trabajando en conjunto e implementando soluciones a los retos encontrados diariamente, logrando los objetivos establecidos por la empresa.</p>
+        </div>
+
+        <div class="col" id="cards-exp-laboral">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="card">
+                <h2 class="card-header"><img src="img/sbc-logo.png" width="80" height="80" class="border rounded">SBC - Epica Nero</h2>
+                <div class="card-body">
+                  <h3 class="card-title">Tecnico en Telecomunicaciones</h3>
+                  <h5>Dic 2019 - Mar 2022</h5>
+                  <ul>
+                    <li>Calibracion y ajuste de Nodos Opticos en conjunto con HUB de TLC.</li>
+                    <li>Calibracion de Amplificadores SCIENTIFIC GAINMARKER</li>
+                    <li>Diagnóstico y soluciones a interferencias/ ingress detectados según topología de Nodo y Zona.</li>
+                    <li> Manejo de Herramientas para diagnóstico, medición, reparación y mantenimiento de la red.</li>
+                  </ul>
+                </div>
+              </div>              
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <h2 class="card-header"><img src="img/circuit-logo.png" width="80" height="80" class="border rounded">AUSA Electronics</h2>
+                <div class="card-body">
+                  <h3 class="card-title">Tecnico Electronico</h3>
+                  <h5>Feb 2018 - Nov 2019</h5>
+                  <ul>
+                    <li>Diagnóstico y Reparación de componentes de las áreas detectadas a reparar.</li>
+                    <li>Manejo de Herramientas para diagnóstico, medición y reparación de componentes.</li>
+                    <li>Manejo de SO (Windows, Linux)</li>
+                    <li>Redes tcp/ip (windows)</li>
+                    <li>Sistema de seguridad (CCTV)</li>
+                  </ul>
+                </div>
+              </div>              
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <h2 class="card-header"><img src="img/dia-logo.png" width="80" height="80" class="border rounded">Supermercados DIA</h2>
+                <div class="card-body">
+                  <h3 class="card-title">Gerente de Sucursal</h3>
+                  <h5>May 2014 - Ene 2018</h5>
+                  <ul>
+                    <li>Planificación de objetivos mensuales con los jefes de cada sector de producción y administración, basados en estimados de ventas.</li>
+                    <li>Control de liquidaciones de haberes, toma de sanciones y medidas disciplinarias, atención y trato directo con la comisión interna, inducción del personal ingresado.</li>
+                    <li>Planificacion y puesta en escena de objetivos de ventas, control de inventarios, perdidas conocidas y desconocidas,control de ingreso de stock de mercadería, control e ingreso de remitos, control de caja fuerte.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <h2 class="card-header"><img src="img/bk-logo.png" width="80" height="80" class="border rounded">Burger King</h2>
+                <div class="card-body">
+                  <h3 class="card-title">Encargado de Turno</h3>
+                  <h5>Sep 2008 - Nov 2012</h5>
+                  <ul>
+                    <li>Líder de Producción - Manteniendo la calidad de los productos y la satisfaccion del cliente, basado en calidad, cordialidad y limpieza del establecimiento, manteniendo la excelencia en el servicio.</li>
+                    <li>Control y reporte de desperdicios</li>
+                    <li>Atención al cliente, cajero, Cocina, Delivery, control de abastecimiento en el área de cocina y marketing.</li>
+                    <li>Trabajo en equipo y habilidades de comunicación hacia el personal de trabajo.</li>
+                  </ul>
+                </div>
+              </div>            
+            </div>
+
+          </div> <!-- FIN ROW-->
+        </div> <!--FIN COL-->
+
+      </div><!--FIN CONTAINER-->
+    </section>
+
+    <section id="estudios">
+
+      <div class="container">
+
+        <div class="seccion-titulo">
+          <h2>Estudios realizados</h2>
+          <p>En este apartado se encuentran las instituciones en las cuales realize mis estudios y poder llevar a cabo mi formacion actual. Tambien podras ver mis Skills en las cuales me destaco.</p>
+        </div>
+
+        <div class="col">
+          <div class="row">
+
+            <div class="col-lg-4">
+              <img src="6076" alt="">
+              <h3>PRIMARIA</h3>
+              <h5>1995 - 2001</h5>
+              <p><em>IE Republica de Nicaragua "6076" - Lima - Peru</em></p>
+              <p>Establecimiento donde realize mis estudios primarios.</p>
+            </div>
+            <div class="col-lg-4">
+              <img src="6048" alt="">
+              <h3>SECUNDARIA</h3>
+              <h5>2001 - 2003</h5>
+              <p><em>IE Jorge Basadre - Lima - Peru</em></p>
+              <p>Establecimiento en el cual realize parte de mis estudios secundarios.</p>
+            </div>
+            <div class="col-lg-4">
+              <img src="volta" alt="">
+              <h3>SECUNDARIA</h3>
+              <H5>2004 - 2018</H5>
+              <p><em>Escuela Tecnica N 19 Alejandro Volta</em></p>
+              <p>Establecimiento en el cual continue y pude culminar mis estudios secundarios.</p>
+            </div>
+
+            <div class="col-lg-4">
+              <img src="UBA" alt="">
+              <h3>UNIVERSIDAD</h3>
+              <h5>2019 - 2020</h5>
+              <p><em>Universidad de Buenos Aires - BS As - Argentina</em></p>
+              <p>Establecimiento en el cual realize mis estudios universitarios.</p>
+            </div>
+
+            <div class="col-lg-4">
+              <img src="ARG PROG" alt="">
+              <h3>ARGENTINA PROGRAMA</h3>
+              <h5>2022 - En curso</h5>
+              <p><em>Plan de desarrollo - Argentina Programa</em></p>
+              <p>Actualmente capacitandome y formandome para el puesto de Full Stack Developer Jr.</p>
+
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="seccion-titulo">
+          <h2>Hard/Soft Skills</h2>
+          <p>En esta seccion podras ver mi experiencia en cada sector como <strong>Full Stack Developer Jr.</strong> asi como tambien mi nivel en idiomas.</p>
+        </div>
+
+        <div class="container" id="skills-container">
+          <div class="card">
+            <div class="porcentaje" style="--clr:#04fc43;--num:45;"> <!-- -num cambia el valos del % del circulo-->
+              <div class="punto">         
+              </div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="numero-porcentaje">
+                <h2>45<span>%</span></h2>
+                <p>HTML</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="porcentaje" style="--clr:#04fc43;--num:68;"> <!-- -num cambia el valos del % del circulo-->
+              <div class="punto">         
+              </div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="numero-porcentaje">
+                <h2>68<span>%</span></h2>
+                <p>CSS</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="porcentaje" style="--clr:#04fc43;--num:45;"> <!-- -num cambia el valos del % del circulo-->
+              <div class="punto">         
+              </div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="numero-porcentaje" id="skill-photoshop">
+                <h2>45<span>%</span></h2>
+                <p>Photoshop</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="porcentaje" style="--clr:#04fc43;--num:75;"> <!-- -num cambia el valos del % del circulo-->
+              <div class="punto">         
+              </div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="numero-porcentaje">
+                <h2>75<span>%</span></h2>
+                <p>MYSQL</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="porcentaje" style="--clr:#04fc43;--num:30;"> <!-- -num cambia el valos del % del circulo-->
+              <div class="punto">         
+              </div>
+              <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70"></circle>
+              </svg>
+              <div class="numero-porcentaje">
+                <h2>30<span>%</span></h2>
+                <p>JAVASCRIPT</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+        
+  </main>
+  
+<script src="typed.js/typed.min.js"></script>
+<script src="js/main.js"></script>
+<script src="aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script src="bootstrap/js/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

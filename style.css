@@ -1,0 +1,582 @@
+
+/*--------------------------------------------------------------
+# Seccion Intro
+--------------------------------------------------------------*/
+#intro {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fondocesar.jpg") top center;
+  background-size: cover;
+}
+
+#intro .arg-prog a {
+  position: absolute;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+  top: 20px;
+  left: 50px;
+}
+
+#intro .intro__container1 {
+  position: absolute;
+  z-index: 2;
+  min-width: 300px;
+  top: 200px;
+}
+#intro .intro__container2 {
+  position: absolute;
+  z-index: 2;
+  min-width: 300px;
+  top: 275px;
+}
+
+#intro h1 {
+  margin: 0 0 10px 0;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 60px;
+  color: #fff;
+}
+
+#intro p {
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+#intro p span {
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 3px;
+  border-bottom: 2px solid #3bc1ee;
+}
+
+/*Cortina fantasma*/
+#intro:before {
+  content: "";                            /*requisito de :before */
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  #intro h1 {
+    font-size: 45px;
+    line-height: 36px;
+  }
+
+  #intro p {
+    font-size: 24px;
+    line-height: 2px;
+  }
+  #intro p span {
+    font-size: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Menu de navegacion
+--------------------------------------------------------------*/
+#navbar {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  background-color: #040b14;
+  z-index: 10;
+}
+
+#navbar .navbar__foto img{
+  border: 5px solid #040b14;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: -20px;
+  z-index: 2;
+  left: 30px;
+}
+
+#navbar h5 a {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar .redes-sociales {
+  position: absolute;
+  left: 190px;
+}
+
+#navbar .redes-sociales a {
+  display: inline-block;                /* inline-block Utiliza solo el espacio desde donde empieza los iconos hasta donde terminan y NO toda la columna */
+  color: #fff;
+  line-height: 1;                       /* altura de recuadro*/
+  padding: 8px;                         /* relleno del recuadro*/
+  margin-right: 1px;
+  border-radius: 50%;
+  width: 30px;
+  height: 33px;
+  transition: 0.3s;
+}
+
+@media (hover: hover) {                 /* Para que solo funcione en dispositivos con cursor */
+  .redes-sociales a:hover {
+    background: #149ddd;
+    color: #fff;
+  }
+}
+
+/*Offcanvas-Olvidaste tu contraseña*/
+.forget-password {
+  margin-left: 40px;
+}
+#navbar__botones-login {
+  position: absolute;
+  right: 20px;
+}
+
+#navbar__botones {
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+#navbar__botones a:hover,
+#navbar__botones li:hover>a {         /*Hover - cuando pasas el mouse - */
+  text-decoration: none;
+  color: #fff;
+}
+
+#navbar__botones a i,
+#navbar__botones a:focus i {
+  font-size: 24px;
+  color: #6f7180;
+}
+
+#navbar__botones a:hover i,
+#navbar__botones .active i,           /* :hover + .active + :focus */
+#navbar__botones .active:focus i,     /* Activan los iconos cuando seleccionas el item */
+#navbar__botones li:hover>a i {
+  color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Cuerpo Main
+--------------------------------------------------------------*/
+
+section {
+  padding: 50px;
+}
+
+.seccion-titulo h2 {
+  padding: 20px 20px 20px 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  position: relative;
+}
+
+.seccion-titulo p {
+  font-family: sans-serif;
+  font-size: 19px;
+}
+
+/*--------------------------------------------------------------
+# Seccion sobremi
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Seccion exp-laboral
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Seccion Skills
+--------------------------------------------------------------*/
+
+#skills-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 43px;  /* Establece el espacio entre filas y columnas en 40 px:*/
+}
+
+#skills-container .card {
+  position: relative;
+  width: 220px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+}
+
+#skills-container .card .porcentaje {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+#skills-container .card .porcentaje svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+#skills-container .card .porcentaje svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 7px; /* Grosor de barra de skill */
+  transform: translate(5px, 5px);
+}
+
+#skills-container .card .porcentaje svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440px - (440px * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.punto {
+  position: absolute;
+  inset: 5px;
+  z-index: 4;
+  animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(calc(3.6deg * var(--num)));
+}
+
+}
+.punto::before {
+  content: '';  /*Usar siempre "conten: '' " con ::before */
+  position: absolute;
+  top: -9px;   /* alineacion de punto en barra de carga*/
+  left: 50%;
+  transform: translateX(-50%);
+  width: 17px;    /* GROSOR DE */
+  height: 17px;   /*   BOTON  */
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+
+.numero-porcentaje {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.numero-porcentaje h2 {
+  position: relative;
+  top: 5px;
+  left: 5px;
+  color: #040b14;
+  font-weight: 700;
+  font-size: 40px;
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.numero-porcentaje h2 span {
+  color: #040b14;
+  font-size: 20px;
+  font-weight: 350;
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 2s;
+}
+
+.numero-porcentaje p {
+  color: #040b14;
+  font-size: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 2s linear forwards;
+  animation-delay: 2.5s;
+
+}
+
+/* Esconder texto a "X" Pixel
+@media all and (max-width:1850px) {
+  #navbar h5 a {
+    font-size: 0;
+  }
+}
+*/
+
+/* Animated Share Menu / Button
+
+.share-menu {
+  position:relative;
+  width:220px;
+  height:120px;
+}
+.share-menu .share-btn {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80px;
+  height:80px;
+  background:#00acee;
+  color:#f5f5f5;
+  font-size:30px;
+  text-align:center;
+  line-height:80px;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:2;
+}
+.share-menu i.fa-close {
+  display:none;
+}
+.share-menu.active i.fa-share-alt {
+  display:none;
+}
+.share-menu.active i.fa-close {
+  display:inline;
+}
+.share-menu .social-btn {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:75px;
+  height:75px;
+  background:#eee8e8;
+  color:#222;
+  border-radius:50%;
+  cursor:pointer;
+  text-align:center;
+  line-height:75px;
+  font-size:30px;
+  transition:all 300ms ease-in-out 0ms;
+}
+.share-menu.active div:nth-child(2){
+  top:-25%;
+  left:50%;
+  transform:translate(-50%,-100%);
+  transition:all 300ms ease-in-out 0ms;
+}
+.share-menu.active div:nth-child(3){
+  top:0%;
+  left:100%;
+  transform:translate(-50%,-50%);
+  transition:all 300ms ease-in-out 80ms;
+}
+.share-menu.active div:nth-child(4){
+  top:100%;
+  left:100%;
+  transform:translate(-50%,-50%);
+  transition:all 300ms ease-in-out 160ms;
+}
+.share-menu.active div:nth-child(5){
+  top:125%;
+  left:50%;
+  transform:translate(-50%,0%);
+  transition:all 300ms ease-in-out 240ms;
+}
+.share-menu.active div:nth-child(6){
+  top:100%;
+  left:0%;
+  transform:translate(-50%,-50%);
+  transition:all 300ms ease-in-out 320ms;
+}
+.share-menu.active div:nth-child(7){
+  top:0%;
+  left:0%;
+  transform:translate(-50%,-50%);
+  transition:all 300ms ease-in-out 400ms;
+}
+*/
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;
+  background: #040b14;
+  overflow-y: auto;
+}
+
+#header .container a {
+  text-align: center;
+  transition: 0.5s;
+}
+
+#header .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .profile h1 a,
+#header .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#header .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover {
+  background: #149ddd;
+  color: #fff;
+  text-decoration: none;
+}
+
+#main {
+  margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+
+  #main {
+    margin-left: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation 
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu>ul>li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #149ddd;
+}
+
+/* Mobile Navigation 
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  background-color: #149ddd;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
