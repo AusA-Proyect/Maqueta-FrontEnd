@@ -209,11 +209,14 @@ section {
 #skills-container .card {
   position: relative;
   width: 220px;
-  height: 250px;
+  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-style: none;
+  z-index: 1;
+  box-shadow: -10px 5px 10px gray;
+  border-radius: 50%;
 }
 
 #skills-container .card .porcentaje {
